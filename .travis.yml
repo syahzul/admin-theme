@@ -6,4 +6,4 @@ sudo: false
 
 before_script: travis_retry composer install --no-interaction
 
-script: make sniff test
+script: phpunit
