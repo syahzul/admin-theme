@@ -1,4 +1,4 @@
-@extends('layouts.site')
+@extends('layouts.app')
 
 @section('page_title')
     Home
