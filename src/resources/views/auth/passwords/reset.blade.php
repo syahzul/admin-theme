@@ -1,4 +1,4 @@
-@extends('auth.auth')
+@extends('layouts.auth')
 
 @section('page_title')
     Password reset
