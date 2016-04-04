@@ -4,17 +4,17 @@ elixir(function(mix) {
 
     mix.copy(
         'node_modules/bootstrap/dist/fonts',
-        'public/fonts'
+        'public/build/fonts'
     );
 
     mix.copy(
         'node_modules/font-awesome/fonts',
-        'public/fonts'
+        'public/build/fonts'
     );
 
     mix.copy(
         'node_modules/ionicons/dist/fonts',
-        'public/fonts'
+        'public/build/fonts'
     );
 
     mix.scripts([
@@ -30,8 +30,8 @@ elixir(function(mix) {
         '../../../node_modules/bootstrap/less/bootstrap.less',
         '../../../node_modules/font-awesome/less/font-awesome.less',
         '../../../node_modules/ionicons/dist/css/ionicons.min.css',
-        'admin-lte/AdminLTE.less',
-        'admin-lte/skins/_all-skins.less'
+        'adminlte/AdminLTE.less',
+        'adminlte/skins/_all-skins.less'
     ], 'public/css/vendor.css');
 
     mix.less([
