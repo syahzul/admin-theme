@@ -2,6 +2,10 @@
     "name": "syahzul/admin-theme",
     "description": "Admin theme for Laravel 5.2 application, based on AdminLTE",
     "license": "MIT",
+    "type": "package",
+    "keywords": [
+        "bootstrap", "theme", "admin", "template", "administrator", "admin-lte", "adminlte", "laravel"
+    ],
     "authors": [
         {
             "name": "Syahril Zulkefli",
@@ -9,5 +13,17 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0",
+        "illuminate/console": "~5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Syahzul\\AdminTheme\\": "src/"
+        }
+    }
 }
