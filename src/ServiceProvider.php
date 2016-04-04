@@ -71,7 +71,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     private function publishPublicAssets()
     {
         $this->publishes([
-//            dirname(__FILE__) . '/public/img' => public_path('img'),
             dirname(__FILE__) . '/public/plugins'  => public_path('plugins'),
         ], 'assets');
     }
