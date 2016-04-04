@@ -52,7 +52,7 @@
 
         </div><!-- /.login-box -->
 
-        @include('auth.scripts')
+        @include('partials.auth_scripts')
 
     </body>
 

@@ -1,13 +1,13 @@
 @extends('auth.auth')
 
-@section('htmlheader_title')
+@section('page_title')
     Log in
 @endsection
 
 @section('content')
 <body class="login-page">
     <div class="login-box">
-        <@include('partials.login_logo')
+        @include('partials.login_logo')
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
@@ -59,7 +59,7 @@
 
     </div><!-- /.login-box -->
 
-    @include('auth.scripts')
+    @include('partials.auth_scripts')
 
     <script>
         $(function () {

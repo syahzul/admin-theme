@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('htmlheader_title')
+@section('page_title')
     Server error
 @endsection
 

@@ -38,8 +38,13 @@ elixir(function(mix) {
         'app.less'
     ], 'public/css/app.css');
 
+    mix.less([
+        'welcome.less'
+    ], 'public/css/welcome.css');
+
     mix.version([
         'public/css/app.css',
+        'public/css/welcome.css',
         'public/css/vendor.css',
         'public/js/app.js',
         'public/js/vendor.js'

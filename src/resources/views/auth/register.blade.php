@@ -1,6 +1,6 @@
 @extends('auth.auth')
 
-@section('htmlheader_title')
+@section('page_title')
     Register
 @endsection
 
@@ -65,7 +65,7 @@
         </div><!-- /.form-box -->
     </div><!-- /.register-box -->
 
-    @include('auth.scripts')
+    @include('partials.auth_scripts')
 
     <script>
         $(function () {
