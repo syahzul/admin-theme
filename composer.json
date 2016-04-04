@@ -1,0 +1,13 @@
+{
+    "name": "syahzul/admin-theme",
+    "description": "Admin theme for Laravel 5.2 application, based on AdminLTE",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Syahril Zulkefli",
+            "email": "syahzul@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
