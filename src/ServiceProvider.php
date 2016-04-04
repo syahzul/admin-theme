@@ -56,7 +56,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             dirname(__FILE__) . '/resources/assets/less/app.less' => base_path('resources/assets/less/app.less'),
             dirname(__FILE__) . '/resources/assets/less/welcome.less' => base_path('resources/assets/less/welcome.less'),
             dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/build/less' => base_path('resources/assets/less/adminlte'),
-            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/build/less' => base_path('resources/assets/less/adminlte'),
+            dirname(__FILE__) . '/../../../../vendor/twbs/bootstrap/less' => base_path('resources/assets/less/bootstrap-less'),
             dirname(__FILE__) . '/resources/assets/js' => base_path('resources/assets/js'),
             dirname(__FILE__) . '/package.json' => base_path('package.json'),
             dirname(__FILE__) . '/gulpfile.js' => base_path('gulpfile.js'),
@@ -71,7 +71,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     private function publishPublicAssets()
     {
         $this->publishes([
-            dirname(__FILE__) . '/public/img' => public_path('img'),
+//            dirname(__FILE__) . '/public/img' => public_path('img'),
             dirname(__FILE__) . '/public/plugins'  => public_path('plugins'),
         ], 'assets');
     }
