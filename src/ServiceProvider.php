@@ -14,6 +14,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishPublicAssets();
         $this->publishViews();
         $this->publishResourceAssets();
+        $this->publishNpm();
     }
 
     /**
@@ -42,7 +43,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             dirname(__FILE__) . '/resources/views/layouts' => base_path('resources/views/layouts'),
             dirname(__FILE__) . '/resources/views/home.blade.php' => base_path('resources/views/home.blade.php'),
             dirname(__FILE__) . '/resources/views/welcome.blade.php' => base_path('resources/views/welcome.blade.php'),
-        ]);
+        ], 'view');
     }
 
     /**
@@ -58,9 +59,20 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/build/less' => base_path('resources/assets/less/adminlte'),
             dirname(__FILE__) . '/../../../../vendor/twbs/bootstrap/less' => base_path('resources/assets/less/bootstrap-less'),
             dirname(__FILE__) . '/resources/assets/js' => base_path('resources/assets/js'),
+        ], 'asset');
+    }
+
+    /**
+     * Publish package resource assets related to NPM to Laravel project
+     *
+     * @return void
+     */
+    private function publishNpm()
+    {
+        $this->publishes([
             dirname(__FILE__) . '/package.json' => base_path('package.json'),
             dirname(__FILE__) . '/gulpfile.js' => base_path('gulpfile.js'),
-        ]);
+        ], 'npm');
     }
 
     /**
@@ -72,7 +84,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->publishes([
             dirname(__FILE__) . '/public/plugins'  => public_path('plugins'),
-        ], 'assets');
+        ], 'public');
     }
 
 }
