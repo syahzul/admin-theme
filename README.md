@@ -1,44 +1,98 @@
 # Laravel Admin Theme
 
 [![Laravel 5.2](https://img.shields.io/badge/Laravel-5.2-orange.svg?style=flat-square)](http://laravel.com)
-[![Latest Stable Version](https://poser.pugx.org/syahzul/admin-theme/v/stable?format=flat-square)](https://packagist.org/packages/syahzul/admin-theme)
 [![Total Downloads](https://poser.pugx.org/syahzul/admin-theme/downloads?format=flat-square)](https://packagist.org/packages/syahzul/admin-theme)
+[![Latest Stable Version](https://poser.pugx.org/syahzul/admin-theme/v/stable?format=flat-square)](https://packagist.org/packages/syahzul/admin-theme)
 [![Latest Unstable Version](https://poser.pugx.org/syahzul/admin-theme/v/unstable?format=flat-square)](https://packagist.org/packages/syahzul/admin-theme)
 [![License](https://poser.pugx.org/syahzul/admin-theme/license?format=flat-square)](https://packagist.org/packages/syahzul/admin-theme)
 
-## Before Installation
+Admin theme for your Laravel 5.2 application. Inspired by [AdminLTE template Laravel 5 package](https://github.com/acacha/adminlte-laravel) and relies
+on [Twitter Bootstrap 3.3.*](https://github.com/twbs/bootstrap) and [AdminLTE](https://github.com/almasaeed2010/AdminLTE).
 
-Run ```php artisan make:auth``` before proceed. Make sure everything working.
+## Requirement
 
-The package will replace some default view files.
+Run these commands to generate basic authentication views and routes.
+
+```
+php artisan make:auth
+php artisan migrate
+```
+
+This package relies on Bootstrap and AdminLTE package. To install the packages, simply execute:
+
+```
+composer require twbs/bootstrap
+composer require almasaeed2010/adminlte
+```
 
 ## Installation
 
+Please take note that this package will replace some default view files generate by Laravel. Use fresh
+copy of Laravel installation only.
+
 First, pull in the package through Composer.
 
-Run `composer require syahzul/admin-theme`
+```
+composer require syahzul/admin-theme
+```
 
 Now include the service provider within `config/app.php`.
 
-```php
+```
 'providers' => [
     Syahzul\AdminTheme\ServiceProvider::class,
 ];
 ```
 
-Then, publish the files with:
+## Publishing files
 
-```php
+Next step is to publish package file to your application.
+
+**All files**
+
+Executing this command will copy all related files to:
+* `/resources/views/`
+* `/resources/assets/`
+* `/public/`
+* `/package.json`
+* `/gulpfile.js`
+
+```
 php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force
 ```
 
-**Note:**
+**View only**
 
-Using ```--force``` will overwrite some of default view files.
+Executing this command will copy all related files to your ```resources/views``` folder only.
 
-Admin theme for your Laravel 5.2 applications. The theme written inspired by
-[https://github.com/acacha/adminlte-laravel](AdminLTE template Laravel 5 package), with some
-improvements.
+```
+php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force --tag=view
+```
+
+**Asset only**
+
+Executing this command will copy all related files to your ```resources/assets``` folder only.
+
+```
+php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force --tag=asset
+```
+
+**Public only**
+
+Executing this command will copy all related files to your ```public``` folder only.
+
+```
+php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force --tag=view
+```
+
+## Compiling asset files
+
+Run these commands to download all additional package and compiling assets for your app.
+
+```
+npm install
+gulp
+```
 
 **Not ready for production!**
 
