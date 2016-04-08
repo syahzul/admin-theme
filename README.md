@@ -81,7 +81,7 @@ php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --for
 Executing this command will copy all related files to your ```public``` folder only.
 
 ```
-php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force --tag=view
+php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force --tag=public
 ```
 
 ## Compiling asset files
@@ -93,6 +93,10 @@ npm install
 gulp
 ```
 
-**Not ready for production!**
+## License
 
-Use at your own risk!
+Laravel Admin Theme is open-sourced software licensed under the MIT license.
+
+## Warning
+
+Not ready for production! Use at your own risk!
