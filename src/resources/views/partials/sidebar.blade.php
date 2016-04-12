@@ -7,7 +7,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{{ asset('https://s3.amazonaws.com/uifaces/faces/twitter/franktisellano/73.jpg') }}" class="img-circle" alt="User Image" />
+                <img src="{{ asset('img/samples/01-128x128.jpg') }}" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
                 <p>{{ Auth::user()->name }}</p>
