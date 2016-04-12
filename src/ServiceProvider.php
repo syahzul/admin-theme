@@ -42,6 +42,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             dirname(__FILE__) . '/resources/views/errors' => base_path('resources/views/errors'),
             dirname(__FILE__) . '/resources/views/partials' => base_path('resources/views/partials'),
             dirname(__FILE__) . '/resources/views/layouts' => base_path('resources/views/layouts'),
+            dirname(__FILE__) . '/resources/views/profile' => base_path('resources/views/profile'),
             dirname(__FILE__) . '/resources/views/users' => base_path('resources/views/users'),
             dirname(__FILE__) . '/resources/views/home.blade.php' => base_path('resources/views/home.blade.php'),
             dirname(__FILE__) . '/resources/views/welcome.blade.php' => base_path('resources/views/welcome.blade.php'),
