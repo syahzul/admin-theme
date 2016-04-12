@@ -12,6 +12,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     public function boot()
     {
         $this->publishPublicAssets();
+        $this->publishController();
         $this->publishViews();
         $this->publishResourceAssets();
         $this->publishNpm();
@@ -41,9 +42,22 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             dirname(__FILE__) . '/resources/views/errors' => base_path('resources/views/errors'),
             dirname(__FILE__) . '/resources/views/partials' => base_path('resources/views/partials'),
             dirname(__FILE__) . '/resources/views/layouts' => base_path('resources/views/layouts'),
+            dirname(__FILE__) . '/resources/views/users' => base_path('resources/views/users'),
             dirname(__FILE__) . '/resources/views/home.blade.php' => base_path('resources/views/home.blade.php'),
             dirname(__FILE__) . '/resources/views/welcome.blade.php' => base_path('resources/views/welcome.blade.php'),
         ], 'view');
+    }
+
+    /**
+     * Publish package resource assets to Laravel project
+     *
+     * @return void
+     */
+    private function publishController()
+    {
+        $this->publishes([
+            dirname(__FILE__) . '/app/Http/Controllers/ProfileController.php' => base_path('app/Http/Controllers/ProfileController.php'),
+        ], 'controller');
     }
 
     /**
@@ -84,6 +98,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->publishes([
             dirname(__FILE__) . '/public/plugins'  => public_path('plugins'),
+            dirname(__FILE__) . '/public/img'  => public_path('img'),
         ], 'public');
     }
 
