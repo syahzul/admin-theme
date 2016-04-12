@@ -4,11 +4,11 @@
     Server error
 @endsection
 
-@section('contentheader_title')
+@section('page_heading')
     500 Error Page
 @endsection
 
-@section('$contentheader_description')
+@section('page_description')
 @endsection
 
 @section('main-content')

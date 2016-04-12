@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title>@yield('htmlheader_title', 'Home') - Laravel AdminTheme</title>
+    <title>@yield('page_title', 'Home') - Laravel AdminTheme</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <link href="{{ elixir('css/vendor.css') }}" rel="stylesheet" type="text/css">

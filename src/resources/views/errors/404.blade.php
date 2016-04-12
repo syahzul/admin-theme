@@ -4,11 +4,11 @@
     Page not found
 @endsection
 
-@section('contentheader_title')
+@section('page_heading')
     404 Error Page
 @endsection
 
-@section('$contentheader_description')
+@section('page_description')
 @endsection
 
 @section('main-content')

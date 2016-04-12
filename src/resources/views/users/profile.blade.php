@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-@section('page_title')
-    Home
-@endsection
+@section('page_title', 'Your Profile')
+@section('page_heading', 'Your Profile')
 
 @section('main-content')
     <div class="container-fluid">

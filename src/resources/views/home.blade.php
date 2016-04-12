@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-@section('page_title')
-    Home
-@endsection
+@section('page_title', 'Dashboard')
+@section('page_heading', 'Dashboard')
 
 @section('main-content')
 	<div class="container">
