@@ -36,6 +36,9 @@ class ProfileController extends Controller
         if ($request->has('password')) {
             $input['password'] = bcrypt($input['password']);
         }
+        else {
+            unset($input['password']);
+        }
 
         Auth::user()->update($input);
 
