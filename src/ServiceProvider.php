@@ -57,7 +57,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     private function publishController()
     {
         $this->publishes([
-            dirname(__FILE__) . '/app/Http/Controllers/ProfileController.php' => base_path('app/Http/Controllers/ProfileController.php'),
+            dirname(__FILE__) . '/app/Http/Controllers/ProfileController.txt' => base_path('app/Http/Controllers/ProfileController.php'),
         ], 'controller');
     }
 
@@ -99,7 +99,18 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         $this->publishes([
             dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/'  => public_path('plugins'),
-            dirname(__FILE__) . '/public/img'  => public_path('img'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/user1-128x128.jpg'  => public_path('img/samples/user1-128x128.jpg'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/user2-160x160.jpg'  => public_path('img/samples/user2-160x160.jpg'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/user3-128x128.jpg'  => public_path('img/samples/user3-128x128.jpg'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/user4-128x128.jpg'  => public_path('img/samples/user4-128x128.jpg'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/user5-128x128.jpg'  => public_path('img/samples/user5-128x128.jpg'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/user6-128x128.jpg'  => public_path('img/samples/user6-128x128.jpg'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/user7-128x128.jpg'  => public_path('img/samples/user7-128x128.jpg'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/user8-128x128.jpg'  => public_path('img/samples/user8-128x128.jpg'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/photo1.png'  => public_path('img/samples/photo1.png'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/photo2.png'  => public_path('img/samples/photo2.png'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/photo3.jpg'  => public_path('img/samples/photo3.jpg'),
+            dirname(__FILE__) . '/../../../../vendor/almasaeed2010/adminlte/dist/img/photo4.jpg'  => public_path('img/samples/photo4.jpg'),
         ], 'public');
     }
 
