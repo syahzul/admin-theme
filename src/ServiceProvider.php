@@ -2,6 +2,8 @@
 
 namespace Syahzul\AdminTheme;
 
+use Syahzul\AdminTheme\Commands\AdminThemeCommand;
+
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     protected $commands = [

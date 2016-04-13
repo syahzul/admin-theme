@@ -1,6 +1,6 @@
 <?php
 
-namespace Syahzul\AdminTheme;
+namespace Syahzul\AdminTheme\Commands;
 
 use ErrorException;
 use Illuminate\Console\Command;
