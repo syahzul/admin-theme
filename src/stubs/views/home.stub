@@ -39,7 +39,9 @@
 
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="info-box">
-					<span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+					<span class="info-box-icon bg-green">
+					    <i class="ion ion-ios-cart-outline"></i>
+                    </span>
 
 					<div class="info-box-content">
 						<span class="info-box-text">Sales</span>
@@ -79,7 +81,8 @@
 							</button>
 							<div class="btn-group">
 								<button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
-									<i class="fa fa-wrench"></i></button>
+									<i class="fa fa-wrench"></i>
+                                </button>
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="#">Action</a></li>
 									<li><a href="#">Another action</a></li>
@@ -283,7 +286,7 @@
 											<span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
 										</div>
 										<!-- /.direct-chat-info -->
-										<img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+										<img class="direct-chat-img" src="{{ asset('img/samples/user1-128x128.jpg') }}" alt="message user image"><!-- /.direct-chat-img -->
 										<div class="direct-chat-text">
 											Is this template really for free? That's unbelievable!
 										</div>
@@ -298,7 +301,7 @@
 											<span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
 										</div>
 										<!-- /.direct-chat-info -->
-										<img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+										<img class="direct-chat-img" src="{{ asset('img/samples/user3-128x128.jpg') }}" alt="message user image"><!-- /.direct-chat-img -->
 										<div class="direct-chat-text">
 											You better believe it!
 										</div>
@@ -313,7 +316,7 @@
 											<span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span>
 										</div>
 										<!-- /.direct-chat-info -->
-										<img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+										<img class="direct-chat-img" src="{{ asset('img/samples/user1-128x128.jpg') }}" alt="message user image"><!-- /.direct-chat-img -->
 										<div class="direct-chat-text">
 											Working with AdminLTE on a great new app! Wanna join?
 										</div>
@@ -328,7 +331,7 @@
 											<span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span>
 										</div>
 										<!-- /.direct-chat-info -->
-										<img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
+										<img class="direct-chat-img" src="{{ asset('img/samples/user3-128x128.jpg') }}" alt="message user image"><!-- /.direct-chat-img -->
 										<div class="direct-chat-text">
 											I would love to.
 										</div>
@@ -344,13 +347,13 @@
 									<ul class="contacts-list">
 										<li>
 											<a href="#">
-												<img class="contacts-list-img" src="dist/img/user1-128x128.jpg" alt="User Image">
+												<img class="contacts-list-img" src="{{ asset('img/samples/user1-128x128.jpg') }}" alt="User Image">
 
 												<div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Count Dracula
-                                  <small class="contacts-list-date pull-right">2/28/2015</small>
-                                </span>
+                                                    <span class="contacts-list-name">
+                                                        Count Dracula
+                                                        <small class="contacts-list-date pull-right">2/28/2015</small>
+                                                    </span>
 													<span class="contacts-list-msg">How have you been? I was...</span>
 												</div>
 												<!-- /.contacts-list-info -->
@@ -359,13 +362,13 @@
 										<!-- End Contact Item -->
 										<li>
 											<a href="#">
-												<img class="contacts-list-img" src="dist/img/user7-128x128.jpg" alt="User Image">
+												<img class="contacts-list-img" src="{{ asset('img/samples/user7-128x128.jpg') }}" alt="User Image">
 
 												<div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Sarah Doe
-                                  <small class="contacts-list-date pull-right">2/23/2015</small>
-                                </span>
+                                                    <span class="contacts-list-name">
+                                                        Sarah Doe
+                                                        <small class="contacts-list-date pull-right">2/23/2015</small>
+                                                    </span>
 													<span class="contacts-list-msg">I will be waiting for...</span>
 												</div>
 												<!-- /.contacts-list-info -->
@@ -374,13 +377,13 @@
 										<!-- End Contact Item -->
 										<li>
 											<a href="#">
-												<img class="contacts-list-img" src="dist/img/user3-128x128.jpg" alt="User Image">
+												<img class="contacts-list-img" src="{{ asset('img/samples/user3-128x128.jpg') }}" alt="User Image">
 
 												<div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Nadia Jolie
-                                  <small class="contacts-list-date pull-right">2/20/2015</small>
-                                </span>
+                                                    <span class="contacts-list-name">
+                                                        Nadia Jolie
+                                                        <small class="contacts-list-date pull-right">2/20/2015</small>
+                                                    </span>
 													<span class="contacts-list-msg">I'll call you back at...</span>
 												</div>
 												<!-- /.contacts-list-info -->
@@ -389,13 +392,13 @@
 										<!-- End Contact Item -->
 										<li>
 											<a href="#">
-												<img class="contacts-list-img" src="dist/img/user5-128x128.jpg" alt="User Image">
+												<img class="contacts-list-img" src="{{ asset('img/samples/user5-128x128.') }}jpg" alt="User Image">
 
 												<div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Nora S. Vans
-                                  <small class="contacts-list-date pull-right">2/10/2015</small>
-                                </span>
+                                                    <span class="contacts-list-name">
+                                                        Nora S. Vans
+                                                        <small class="contacts-list-date pull-right">2/10/2015</small>
+                                                    </span>
 													<span class="contacts-list-msg">Where is your new...</span>
 												</div>
 												<!-- /.contacts-list-info -->
@@ -404,13 +407,13 @@
 										<!-- End Contact Item -->
 										<li>
 											<a href="#">
-												<img class="contacts-list-img" src="dist/img/user6-128x128.jpg" alt="User Image">
+												<img class="contacts-list-img" src="{{ asset('img/samples/user6-128x128.jpg') }}" alt="User Image">
 
 												<div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  John K.
-                                  <small class="contacts-list-date pull-right">1/27/2015</small>
-                                </span>
+                                                    <span class="contacts-list-name">
+                                                        John K.
+                                                        <small class="contacts-list-date pull-right">1/27/2015</small>
+                                                    </span>
 													<span class="contacts-list-msg">Can I take a look at...</span>
 												</div>
 												<!-- /.contacts-list-info -->
@@ -419,13 +422,13 @@
 										<!-- End Contact Item -->
 										<li>
 											<a href="#">
-												<img class="contacts-list-img" src="dist/img/user8-128x128.jpg" alt="User Image">
+												<img class="contacts-list-img" src="{{ asset('img/samples/user8-128x128.jpg') }}" alt="User Image">
 
 												<div class="contacts-list-info">
-                                <span class="contacts-list-name">
-                                  Kenneth M.
-                                  <small class="contacts-list-date pull-right">1/4/2015</small>
-                                </span>
+                                                    <span class="contacts-list-name">
+                                                        Kenneth M.
+                                                        <small class="contacts-list-date pull-right">1/4/2015</small>
+                                                    </span>
 													<span class="contacts-list-msg">Never mind I found...</span>
 												</div>
 												<!-- /.contacts-list-info -->
@@ -442,9 +445,9 @@
 								<form action="#" method="post">
 									<div class="input-group">
 										<input type="text" name="message" placeholder="Type Message ..." class="form-control">
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-warning btn-flat">Send</button>
-                          </span>
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-warning btn-flat">Send</button>
+                                        </span>
 									</div>
 								</form>
 							</div>
@@ -462,9 +465,11 @@
 
 								<div class="box-tools pull-right">
 									<span class="label label-danger">8 New Members</span>
-									<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+									<button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                        <i class="fa fa-minus"></i>
 									</button>
-									<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+									<button type="button" class="btn btn-box-tool" data-widget="remove">
+                                        <i class="fa fa-times"></i>
 									</button>
 								</div>
 							</div>
@@ -472,42 +477,42 @@
 							<div class="box-body no-padding">
 								<ul class="users-list clearfix">
 									<li>
-										<img src="dist/img/user1-128x128.jpg" alt="User Image">
+										<img src="{{ asset('img/samples/user1-128x128.jpg') }}" alt="User Image">
 										<a class="users-list-name" href="#">Alexander Pierce</a>
 										<span class="users-list-date">Today</span>
 									</li>
 									<li>
-										<img src="dist/img/user8-128x128.jpg" alt="User Image">
+										<img src="{{ asset('img/samples/user8-128x128.jpg') }}" alt="User Image">
 										<a class="users-list-name" href="#">Norman</a>
 										<span class="users-list-date">Yesterday</span>
 									</li>
 									<li>
-										<img src="dist/img/user7-128x128.jpg" alt="User Image">
+										<img src="{{ asset('img/samples/user7-128x128.jpg') }}" alt="User Image">
 										<a class="users-list-name" href="#">Jane</a>
 										<span class="users-list-date">12 Jan</span>
 									</li>
 									<li>
-										<img src="dist/img/user6-128x128.jpg" alt="User Image">
+										<img src="{{ asset('img/samples/user6-128x128.jpg') }}" alt="User Image">
 										<a class="users-list-name" href="#">John</a>
 										<span class="users-list-date">12 Jan</span>
 									</li>
 									<li>
-										<img src="dist/img/user2-160x160.jpg" alt="User Image">
+										<img src="{{ asset('img/samples/user2-160x160.jpg') }}" alt="User Image">
 										<a class="users-list-name" href="#">Alexander</a>
 										<span class="users-list-date">13 Jan</span>
 									</li>
 									<li>
-										<img src="dist/img/user5-128x128.jpg" alt="User Image">
+										<img src="{{ asset('img/samples/user5-128x128.jpg') }}" alt="User Image">
 										<a class="users-list-name" href="#">Sarah</a>
 										<span class="users-list-date">14 Jan</span>
 									</li>
 									<li>
-										<img src="dist/img/user4-128x128.jpg" alt="User Image">
+										<img src="{{ asset('img/samples/user4-128x128.jpg') }}" alt="User Image">
 										<a class="users-list-name" href="#">Nora</a>
 										<span class="users-list-date">15 Jan</span>
 									</li>
 									<li>
-										<img src="dist/img/user3-128x128.jpg" alt="User Image">
+										<img src="{{ asset('img/samples/user3-128x128.jpg') }}" alt="User Image">
 										<a class="users-list-name" href="#">Nadia</a>
 										<span class="users-list-date">15 Jan</span>
 									</li>
@@ -676,7 +681,7 @@
 				</div>
 				<!-- /.info-box -->
 				<div class="info-box bg-aqua">
-					<span class="info-box-icon"><i class="ion-ios-chatbubble-outline"></i></span>
+					<span class="info-box-icon"><i class="ion-md-star-outline"></i></span>
 
 					<div class="info-box-content">
 						<span class="info-box-text">Direct Messages</span>
@@ -685,9 +690,9 @@
 						<div class="progress">
 							<div class="progress-bar" style="width: 40%"></div>
 						</div>
-                  <span class="progress-description">
-                    40% Increase in 30 Days
-                  </span>
+                        <span class="progress-description">
+                            40% Increase in 30 Days
+                        </span>
 					</div>
 					<!-- /.info-box-content -->
 				</div>
@@ -730,12 +735,9 @@
 					<!-- /.box-body -->
 					<div class="box-footer no-padding">
 						<ul class="nav nav-pills nav-stacked">
-							<li><a href="#">United States of America
-									<span class="pull-right text-red"><i class="fa fa-angle-down"></i> 12%</span></a></li>
-							<li><a href="#">India <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4%</span></a>
-							</li>
-							<li><a href="#">China
-									<span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>
+							<li><a href="#">United States of America <span class="pull-right text-red"><i class="fa fa-angle-down"></i> 12%</span></a></li>
+							<li><a href="#">India <span class="pull-right text-green"><i class="fa fa-angle-up"></i> 4%</span></a></li>
+							<li><a href="#">China <span class="pull-right text-yellow"><i class="fa fa-angle-left"></i> 0%</span></a></li>
 						</ul>
 					</div>
 					<!-- /.footer -->
@@ -748,7 +750,8 @@
 						<h3 class="box-title">Recently Added Products</h3>
 
 						<div class="box-tools pull-right">
-							<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+							<button type="button" class="btn btn-box-tool" data-widget="collapse">
+							    <i class="fa fa-minus"></i>
 							</button>
 							<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
 						</div>
@@ -758,52 +761,57 @@
 						<ul class="products-list product-list-in-box">
 							<li class="item">
 								<div class="product-img">
-									<img src="dist/img/default-50x50.gif" alt="Product Image">
+									<img src="{{ asset('img/samples/default-50x50.gif') }}" alt="Product Image">
 								</div>
 								<div class="product-info">
 									<a href="javascript:void(0)" class="product-title">Samsung TV
-										<span class="label label-warning pull-right">$1800</span></a>
-                        <span class="product-description">
-                          Samsung 32" 1080p 60Hz LED Smart HDTV.
-                        </span>
+										<span class="label label-warning pull-right">$1800</span>
+									</a>
+									<span class="product-description">
+										Samsung 32" 1080p 60Hz LED Smart HDTV.
+									</span>
 								</div>
 							</li>
 							<!-- /.item -->
 							<li class="item">
 								<div class="product-img">
-									<img src="dist/img/default-50x50.gif" alt="Product Image">
+									<img src="{{ asset('img/samples/default-50x50.gif') }}" alt="Product Image">
 								</div>
 								<div class="product-info">
 									<a href="javascript:void(0)" class="product-title">Bicycle
-										<span class="label label-info pull-right">$700</span></a>
-                        <span class="product-description">
-                          26" Mongoose Dolomite Men's 7-speed, Navy Blue.
-                        </span>
+										<span class="label label-info pull-right">$700</span>
+									</a>
+									<span class="product-description">
+										26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+									</span>
 								</div>
 							</li>
 							<!-- /.item -->
 							<li class="item">
 								<div class="product-img">
-									<img src="dist/img/default-50x50.gif" alt="Product Image">
+									<img src="{{ asset('img/samples/default-50x50.gif') }}" alt="Product Image">
 								</div>
 								<div class="product-info">
-									<a href="javascript:void(0)" class="product-title">Xbox One <span class="label label-danger pull-right">$350</span></a>
-                        <span class="product-description">
-                          Xbox One Console Bundle with Halo Master Chief Collection.
-                        </span>
+									<a href="javascript:void(0)" class="product-title">
+										Xbox One <span class="label label-danger pull-right">$350</span>
+									</a>
+									<span class="product-description">
+									    Xbox One Console Bundle with Halo Master Chief Collection.
+									</span>
 								</div>
 							</li>
 							<!-- /.item -->
 							<li class="item">
 								<div class="product-img">
-									<img src="dist/img/default-50x50.gif" alt="Product Image">
+									<img src="{{ asset('img/samples/default-50x50.gif') }}" alt="Product Image">
 								</div>
 								<div class="product-info">
 									<a href="javascript:void(0)" class="product-title">PlayStation 4
-										<span class="label label-success pull-right">$399</span></a>
-                        <span class="product-description">
-                          PlayStation 4 500GB Console (PS4)
-                        </span>
+										<span class="label label-success pull-right">$399</span>
+									</a>
+									<span class="product-description">
+										PlayStation 4 500GB Console (PS4)
+									</span>
 								</div>
 							</li>
 							<!-- /.item -->
@@ -834,6 +842,8 @@
     <!-- jvectormap -->
     <script src="{{ asset('plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
     <script src="{{ asset('plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
+    <!-- Chart.js -->
+    <script src="{{ asset('plugins/chartjs/Chart.min.js') }}"></script>
 @endsection
 
 @section('scripts')
