@@ -1,15 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace {{namespace}}Http\Controllers;
 
-use App\Http\Requests;
-use App\User;
+use {{namespace}}Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function view()
     {
         $user = Auth::user();
@@ -17,7 +21,7 @@ class ProfileController extends Controller
         return view('profile.index', compact('user'));
     }
 
-    public function update(User $user, Request $request)
+    public function update(Request $request)
     {
         $input = $request->all();
 

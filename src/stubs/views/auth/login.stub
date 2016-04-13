@@ -1,4 +1,4 @@
-@extends('layouts.auth')
+@extends('layouts.basic')
 
 @section('page_title')
     Log in

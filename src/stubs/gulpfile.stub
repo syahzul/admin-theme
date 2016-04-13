@@ -21,7 +21,8 @@ elixir(function(mix) {
         '../../../node_modules/jquery/dist/jquery.min.js',
         '../../../public/plugins/datatables/jquery.dataTables.min.js',
         '../../../vendor/twbs/bootstrap/dist/js/bootstrap.min.js',
-        '../../../public/plugins/datatables/dataTables.bootstrap.min.js'
+        '../../../public/plugins/datatables/dataTables.bootstrap.min.js',
+        '../../../vendor/almasaeed2010/adminlte/dist/js/app.min.js',
     ], 'public/js/vendor.js');
 
     mix.scripts([
