@@ -7,7 +7,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{{ asset('img/samples/01-128x128.jpg') }}" class="img-circle" alt="User Image" />
+                <img src="{{ asset('img/samples/user7-128x128.jpg') }}" class="img-circle" alt="User Image" />
             </div>
             <div class="pull-left info">
                 <p>{{ Auth::user()->name }}</p>
@@ -41,7 +41,7 @@
                 </ul>
             </li>
             <li class="header">ADMINISTRATIONS</li>
-            <li><a href="#"><i class='fa fa-users'></i> <span>User Manager</span></a></li>
+            <li><a href="{{ url('/users') }}"><i class='fa fa-users'></i> <span>User Manager</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
