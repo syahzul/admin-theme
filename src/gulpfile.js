@@ -3,7 +3,7 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
 
     mix.copy(
-        'node_modules/bootstrap/dist/fonts',
+        'vendor/twbs/bootstrap/dist/fonts',
         'public/build/fonts'
     );
 
@@ -19,7 +19,9 @@ elixir(function(mix) {
 
     mix.scripts([
         '../../../node_modules/jquery/dist/jquery.min.js',
-        '../../../vendor/twbs/bootstrap/dist/js/bootstrap.min.js'
+        '../../../public/plugins/datatables/jquery.dataTables.min.js',
+        '../../../vendor/twbs/bootstrap/dist/js/bootstrap.min.js',
+        '../../../public/plugins/datatables/dataTables.bootstrap.min.js'
     ], 'public/js/vendor.js');
 
     mix.scripts([
@@ -27,9 +29,10 @@ elixir(function(mix) {
     ], 'public/js/app.js');
 
     mix.less([
-        '../../../vendor/twbs/bootstrap/less/bootstrap.less',
         '../../../node_modules/font-awesome/less/font-awesome.less',
         '../../../node_modules/ionicons/dist/css/ionicons.min.css',
+        '../../../vendor/twbs/bootstrap/less/bootstrap.less',
+        '../../../public/plugins/datatables/dataTables.bootstrap.css',
         'adminlte/AdminLTE.less',
         'adminlte/skins/_all-skins.less'
     ], 'public/css/vendor.css');
