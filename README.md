@@ -43,45 +43,10 @@ Now include the service provider within `config/app.php`.
 ];
 ```
 
-## Publishing files
-
-Next step is to publish package file to your application.
-
-**All files**
-
-Executing this command will copy all related files to:
-* `/resources/views/`
-* `/resources/assets/`
-* `/public/`
-* `/package.json`
-* `/gulpfile.js`
+Next, run the command to begin.
 
 ```
-php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force
-```
-
-**View only**
-
-Executing this command will copy all related files to your ```resources/views``` folder only.
-
-```
-php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force --tag=view
-```
-
-**Asset only**
-
-Executing this command will copy all related files to your ```resources/assets``` folder only.
-
-```
-php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force --tag=asset
-```
-
-**Public only**
-
-Executing this command will copy all related files to your ```public``` folder only.
-
-```
-php artisan vendor:publish --provider="Syahzul\AdminTheme\ServiceProvider" --force --tag=public
+php artisan make:admintheme
 ```
 
 ## Compiling asset files
