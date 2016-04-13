@@ -29,6 +29,10 @@ elixir(function(mix) {
         'app.js'
     ], 'public/js/app.js');
 
+    mix.scripts([
+        'dashboard.js'
+    ], 'public/js/dashboard.js');
+
     mix.less([
         '../../../node_modules/font-awesome/less/font-awesome.less',
         '../../../node_modules/ionicons/dist/css/ionicons.min.css',
@@ -51,6 +55,7 @@ elixir(function(mix) {
         'public/css/welcome.css',
         'public/css/vendor.css',
         'public/js/app.js',
+        'public/js/dashboard.js',
         'public/js/vendor.js'
     ]);
 
