@@ -73,6 +73,7 @@ class AdminThemeCommand extends Command
      */
     protected $controllers = [
         'ProfileController.stub' => 'ProfileController.php',
+        'UsersController.stub'   => 'UsersController.php',
     ];
 
     /**
@@ -159,9 +160,9 @@ class AdminThemeCommand extends Command
             $this->line('<info>Created View:</info> '.$path);
 
             try {
-                copy(__DIR__ . '/stubs/views/' . $key, $path);
+                copy(__DIR__ . '/../stubs/views/' . $key, $path);
             } catch (ErrorException $e) {
-                $this->error(__DIR__ . '/stubs/views/' . $key);
+                $this->error(__DIR__ . '/../stubs/views/' . $key);
                 $this->error($path);
             }
         }
@@ -203,7 +204,7 @@ class AdminThemeCommand extends Command
 
             file_put_contents(
                 app_path('Http/routes.php'),
-                file_get_contents(__DIR__.'/stubs/routes.stub'),
+                file_get_contents(__DIR__.'/../stubs/routes.stub'),
                 FILE_APPEND
             );
         }
@@ -220,7 +221,7 @@ class AdminThemeCommand extends Command
         return str_replace(
             '{{namespace}}',
             $this->getAppNamespace(),
-            file_get_contents(__DIR__.'/stubs/controllers/'.$name)
+            file_get_contents(__DIR__.'/../stubs/controllers/'.$name)
         );
     }
 
@@ -285,17 +286,17 @@ class AdminThemeCommand extends Command
     {
         file_put_contents(
             base_path('resources/assets/less/app.less'),
-            file_get_contents(__DIR__.'/stubs/less/app.stub')
+            file_get_contents(__DIR__.'/../stubs/less/app.stub')
         );
 
         file_put_contents(
             base_path('resources/assets/less/welcome.less'),
-            file_get_contents(__DIR__.'/stubs/less/welcome.stub')
+            file_get_contents(__DIR__.'/../stubs/less/welcome.stub')
         );
 
         file_put_contents(
             base_path('resources/assets/js/app.js'),
-            file_get_contents(__DIR__.'/stubs/js/app.stub')
+            file_get_contents(__DIR__.'/../stubs/js/app.stub')
         );
 
         File::copyDirectory(
