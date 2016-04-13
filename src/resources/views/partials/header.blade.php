@@ -4,9 +4,9 @@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <link href="{{ elixir('css/vendor.css') }}" rel="stylesheet" type="text/css">
+    @yield('vendor_styles')
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('/plugins/iCheck/square/blue.css') }}" rel="stylesheet" type="text/css">
-
     @yield('styles')
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
