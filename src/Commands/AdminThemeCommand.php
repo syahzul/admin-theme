@@ -77,6 +77,30 @@ class AdminThemeCommand extends Command
     ];
 
     /**
+     * The asset files that need to be exported.
+     *
+     * @var array
+     */
+    protected $assets = [
+        'resources/assets/less/app.less' => __DIR__.'/../stubs/less/app.stub',
+        'resources/assets/less/welcome.less' => __DIR__.'/../stubs/less/welcome.stub',
+        'resources/assets/js/app.js' => __DIR__.'/../stubs/js/app.stub',
+        'resources/assets/js/dashboard.js' => __DIR__.'/../stubs/js/dashboard.stub',
+        'gulpfile.js' => __DIR__.'/../stubs/gulpfile.stub',
+        'package.json' => __DIR__.'/../stubs/package.stub',
+    ];
+
+    /**
+     * The LESS folder that need to be copied.
+     *
+     * @var array
+     */
+    protected $lessSources = [
+        'vendor/almasaeed2010/adminlte/build/less' => 'resources/assets/less/adminlte',
+        'vendor/twbs/bootstrap/less' => 'resources/assets/less/bootstrap-less',
+    ];
+
+    /**
      * Execute the console command.
      *
      * @return void
@@ -90,6 +114,8 @@ class AdminThemeCommand extends Command
             $this->exportRoutes();
             $this->copyAssetFiles();
             $this->copyPlugins();
+            $this->copyLessFolders();
+            $this->copySampleImages();
 
             $this->comment('AdminTheme scaffolding generated successfully!');
         }
@@ -157,7 +183,7 @@ class AdminThemeCommand extends Command
         foreach ($this->views as $key => $value) {
             $path = base_path('resources/views/'.$value);
 
-            $this->line('<info>Created View:</info> '.$path);
+            $this->line('<info>View:</info> '.$path);
 
             try {
                 copy(__DIR__ . '/../stubs/views/' . $key, $path);
@@ -179,7 +205,7 @@ class AdminThemeCommand extends Command
 
             $path = app_path('Http/Controllers/'.$value);
 
-            $this->line('<info>Created Controller:</info> '.$path);
+            $this->line('<info>Controller:</info> '.$path);
 
             file_put_contents(
                 app_path('Http/Controllers/'.$value),
@@ -275,8 +301,10 @@ class AdminThemeCommand extends Command
      */
     protected function copyPlugins()
     {
-        $this->info('jQuery plugin copied.');
-        File::copyDirectory(base_path('vendor/almasaeed2010/adminlte/plugins'), public_path('plugins'));
+        $destination = public_path('plugins');
+
+        $this->line('<info>Plugin:</info> ' . $destination);
+        File::copyDirectory(base_path('vendor/almasaeed2010/adminlte/plugins'), $destination);
     }
 
     /**
@@ -284,29 +312,43 @@ class AdminThemeCommand extends Command
      */
     protected function copyAssetFiles()
     {
-        file_put_contents(
-            base_path('resources/assets/less/app.less'),
-            file_get_contents(__DIR__.'/../stubs/less/app.stub')
-        );
+        foreach ($this->assets as $destination => $source) {
 
-        file_put_contents(
-            base_path('resources/assets/less/welcome.less'),
-            file_get_contents(__DIR__.'/../stubs/less/welcome.stub')
-        );
+            $this->line('<info>Asset:</info> ' . base_path($destination));
 
-        file_put_contents(
-            base_path('resources/assets/js/app.js'),
-            file_get_contents(__DIR__.'/../stubs/js/app.stub')
-        );
+            file_put_contents(
+                base_path($destination),
+                file_get_contents($source)
+            );
+        }
+    }
 
-        File::copyDirectory(
-            base_path('vendor/almasaeed2010/adminlte/build/less'),
-            base_path('resources/assets/less/adminlte')
-        );
+    /**
+     * Copy sample images
+     */
+    protected function copySampleImages()
+    {
+        $this->line('<info>Images:</info> ' . public_path('samples'));
 
         File::copyDirectory(
-            base_path('vendor/twbs/bootstrap/less'),
-            base_path('resources/assets/less/bootstrap-less')
+            base_path('vendor/almasaeed2010/adminlte/dist/img'),
+            public_path('img/samples')
         );
+    }
+
+    /**
+     * Copy Less folders
+     */
+    protected function copyLessFolders()
+    {
+        foreach ($this->lessSources as $source => $destination) {
+
+            $this->line('<info>LESS:</info> ' . base_path($destination));
+
+            File::copyDirectory(
+                base_path($source),
+                base_path($destination)
+            );
+        }
     }
 }
