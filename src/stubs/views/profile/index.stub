@@ -314,7 +314,7 @@
                                 <!-- /.tab-pane -->
 
                                 <div class="tab-pane" id="settings">
-                                    @include('users.partials.settings')
+                                    @include('profile.partials.settings')
                                 </div>
                                 <!-- /.tab-pane -->
                             </div>
