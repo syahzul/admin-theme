@@ -10,22 +10,6 @@
 Admin theme for your Laravel 5.2 application. Inspired by [AdminLTE template Laravel 5 package](https://github.com/acacha/adminlte-laravel) and relies
 on [Twitter Bootstrap 3.3.*](https://github.com/twbs/bootstrap) and [AdminLTE](https://github.com/almasaeed2010/AdminLTE).
 
-## Requirement
-
-Run these commands to generate basic authentication views and routes.
-
-```
-php artisan make:auth
-php artisan migrate
-```
-
-This package relies on Bootstrap and AdminLTE package. To install the packages, simply execute:
-
-```
-composer require twbs/bootstrap
-composer require almasaeed2010/adminlte
-```
-
 ## Installation
 
 ***Please take note that this package will replace some default view files generate by Laravel. Use fresh
