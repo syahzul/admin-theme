@@ -87,7 +87,6 @@ class AdminThemeCommand extends Command
         'resources/assets/js/app.js' => __DIR__.'/../stubs/js/app.stub',
         'resources/assets/js/dashboard.js' => __DIR__.'/../stubs/js/dashboard.stub',
         'gulpfile.js' => __DIR__.'/../stubs/gulpfile.stub',
-        'package.json' => __DIR__.'/../stubs/package.stub',
     ];
 
     /**
