@@ -35,7 +35,7 @@ elixir(function(mix) {
 
     mix.less([
         '../../../node_modules/font-awesome/less/font-awesome.less',
-        '../../../node_modules/ionicons/css/ionicons.min.css',
+        '../../../node_modules/ionicons/dist/css/ionicons.min.css',
         '../../../vendor/twbs/bootstrap/less/bootstrap.less',
         '../../../public/plugins/datatables/dataTables.bootstrap.css',
         'adminlte/AdminLTE.less',
