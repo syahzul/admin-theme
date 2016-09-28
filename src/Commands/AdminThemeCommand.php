@@ -26,6 +26,13 @@ class AdminThemeCommand extends Command
     protected $description = 'Scaffold Laravel Admin Theme controllers, views and other required files';
 
     /**
+     * The Laravel version
+     * 
+     * @var float
+     */
+    protected $version;
+
+    /**
      * The views that need to be exported.
      *
      * @var array
@@ -98,6 +105,13 @@ class AdminThemeCommand extends Command
         'vendor/almasaeed2010/adminlte/build/less' => 'resources/assets/less/adminlte',
         'vendor/twbs/bootstrap/less' => 'resources/assets/less/bootstrap-less',
     ];
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->version = $this->getLaravelVersion();
+    }
 
     /**
      * Execute the console command.
@@ -220,16 +234,25 @@ class AdminThemeCommand extends Command
      */
     protected function exportRoutes()
     {
-        $routeFile = file_get_contents(app_path('Http/routes.php'));
+        if ($this->version < 5.3) {
+            $routeFile = app_path('Http/routes.php');
+            $stubFile = __DIR__.'/../stubs/routes.stub';
+        }
+        else {
+            $routeFile = base_path('routes/web.php');
+            $stubFile = __DIR__.'/../stubs/routes/web.stub';
+        }
 
-        preg_match('/ProfileController@view/', $routeFile, $matches);
+        $routeContent = file_get_contents($routeFile);
+        
+        preg_match('/ProfileController@view/', $routeContent, $matches);
 
         if (! count($matches)) {
             $this->info('Updated Routes File.');
 
             file_put_contents(
-                app_path('Http/routes.php'),
-                file_get_contents(__DIR__.'/../stubs/routes.stub'),
+                $routeFile,
+                file_get_contents($stubFile),
                 FILE_APPEND
             );
         }
@@ -349,5 +372,18 @@ class AdminThemeCommand extends Command
                 base_path($destination)
             );
         }
+    }
+
+    /**
+     * Get Laravel version based on route file.
+     * Not a very good solution to check the version number.
+     *
+     * @return float
+     */
+    protected function getLaravelVersion()
+    {
+        $laravel = app();
+
+        return (float) $laravel::VERSION;
     }
 }
