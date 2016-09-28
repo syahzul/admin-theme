@@ -1,0 +1,5 @@
+
+
+Route::get('/profile', 'ProfileController@view');
+Route::post('/profile', 'ProfileController@update');
+Route::get('/users', 'UsersController@index');
