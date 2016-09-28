@@ -1,4 +1,4 @@
-![Laravel Admin Theme](http://www.syahzul.com/cache/laravel-admin-theme-by-syahzul.png)
+![Laravel Admin Theme](http://www.syahzul.com/cache/laravel-admin-theme-by-syahzul-0.3.0.png)
 
 # Laravel Admin Theme
 
