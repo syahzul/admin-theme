@@ -1,6 +1,6 @@
 {
     "name": "syahzul/admin-theme",
-    "description": "Admin theme for Laravel 5.2 application, based on AdminLTE",
+    "description": "Admin theme for Laravel 5.* application, based on AdminLTE",
     "license": "MIT",
     "type": "package",
     "keywords": [
