@@ -4,7 +4,7 @@ namespace Syahzul\AdminTheme\Commands;
 
 use ErrorException;
 use Illuminate\Console\Command;
-use Illuminate\Console\AppNamespaceDetectorTrait;
+use Illuminate\Container\Container;
 use Illuminate\Support\Facades\File;
 
 class AdminThemeCommand extends Command
@@ -385,5 +385,10 @@ class AdminThemeCommand extends Command
         $laravel = app();
 
         return (float) $laravel::VERSION;
+    }
+    
+    protected function getAppNamespace()
+    {
+        return Container::getInstance()->getNamespace();
     }
 }
