@@ -23,8 +23,16 @@ php artisan migrate
 
 Then, get the this package through Composer.
 
+**Laravel 5.4**
+
 ```
 composer require syahzul/admin-theme
+```
+
+**Laravel 5.3 and below**
+
+```
+composer require syahzul/admin-theme:3.*
 ```
 
 ### Step 3
