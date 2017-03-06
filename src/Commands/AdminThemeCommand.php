@@ -9,8 +9,6 @@ use Illuminate\Support\Facades\File;
 
 class AdminThemeCommand extends Command
 {
-    use AppNamespaceDetectorTrait;
-
     /**
      * The name and signature of the console command.
      *
